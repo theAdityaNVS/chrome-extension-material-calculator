@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="calci-frame container">
+            <form name="calci" class="calci-form">
+                <input type="text" name="display" class="calci-display">
+            </form>
+            <table>
+                <tr class="row1">
+                    <td><input class="btn danger-btn" type="button" value="c" onclick="clearDisplay()"></td>
+                    <td><input class="btn danger-btn" type="button" value="del" onclick="deleteInput()"></td>
+                    <td><input class="btn alt-btn" type="button" value="/" onclick="selectInput('/')"></td>
+                    <td><input class="btn alt-btn" type="button" value="x" onclick="selectInput('x')"></td>
+                </tr>
+                <tr class="row2">
+                    <td><input class="btn" type="button" value="7" onclick="selectInput(7)"></td>
+                    <td><input class="btn" type="button" value="8" onclick="selectInput(8)"></td>
+                    <td><input class="btn" type="button" value="9" onclick="selectInput(9)"></td>
+                    <td><input class="btn alt-btn" type="button" value="-" onclick="selectInput('-')"></td>
+                </tr>
+                <tr class="row3">
+                    <td><input class="btn" type="button" value="4" onclick="selectInput(4)"></td>
+                    <td><input class="btn" type="button" value="5" onclick="selectInput(5)"></td>
+                    <td><input class="btn" type="button" value="6" onclick="selectInput(6)"></td>
+                    <td><input class="btn alt-btn" type="button" value="+" onclick="selectInput('+')"></td>
+                </tr>
+                <tr class="row4">
+                    <td><input class="btn" type="button" value="1" onclick="selectInput(1)"></td>
+                    <td><input class="btn" type="button" value="2" onclick="selectInput(2)"></td>
+                    <td><input class="btn" type="button" value="3" onclick="selectInput(3)"></td>
+                    <td rowspan="2"><input class="btn equal-btn" type="button" value="=" onclick="equals()"></td>
+                </tr>
+                <tr class="row5">
+                    <td colspan="2"><input class="btn zero-btn" type="button" value="0" onclick="selectInput(0)"></td>
+                    <td><input class="btn alt-btn" type="button" value="." onclick="selectInput('.')"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <p class="copyright">Copyright &copy; 2020 Aditya.NVS <br> Made with 💛</p>
+        </div>
+    </footer>
+</body>
+</html>
