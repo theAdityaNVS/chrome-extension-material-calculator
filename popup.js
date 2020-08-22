@@ -1,29 +1,30 @@
+let equalsBtn = document.querySelector(".equal-btn");
 let displayValue = "";
 
-document.querySelectorAll('.btn').forEach(item => {
+document.querySelectorAll('.inp-btn').forEach(item => {
     item.addEventListener('click', event => {
         selectInput(item.value);
     });
 });
 
+equalsBtn.addEventListener("click", function() {equals()});
 
 function selectInput(choice) {
-    // document.calci.display.value = document.calci.display.value + choice;
     let calciDisplay = document.getElementById("display");
     displayValue = calciDisplay.value + choice;
     calciDisplay.setAttribute("value", displayValue);
-    console.log(choice);
 }
 
-// function equals() {
-// //    let data = document.calci.display.value;
-//     let calciDisplay = document.getElementsByClassName("calci-display");
-//     let data =  calciDisplay.value;
-//    if(data){
-//        calciDisplay.setAttribute("value", eval(data));
-//     //    document.calci.display.value = eval(data);
-//    } 
-// }
+function equals() {
+//    let data = document.calci.display.value;
+    let calciDisplay = document.getElementById("display");
+    let data =  calciDisplay.value;
+   if(data){
+       let ans = eval(data);
+       console.log(ans);
+       calciDisplay.setAttribute("value", ans);
+   } 
+}
 
 // function clearDisplay() {
 //     // document.calci.display.value = "";
