@@ -1,4 +1,5 @@
 let equalsBtn = document.querySelector(".equal-btn");
+let cancelBtn = document.querySelector(".c-btn");
 let displayValue = "";
 
 document.querySelectorAll('.inp-btn').forEach(item => {
@@ -8,6 +9,7 @@ document.querySelectorAll('.inp-btn').forEach(item => {
 });
 
 equalsBtn.addEventListener("click", function() {equals()});
+cancelBtn.addEventListener("click", function() {clearDisplay()});
 
 function selectInput(choice) {
     let calciDisplay = document.getElementById("display");
@@ -16,21 +18,19 @@ function selectInput(choice) {
 }
 
 function equals() {
-//    let data = document.calci.display.value;
     let calciDisplay = document.getElementById("display");
     let data =  calciDisplay.value;
-   if(data){
-       let ans = eval(data);
-       console.log(ans);
-       calciDisplay.setAttribute("value", ans);
-   } 
+    if(data){
+        let ans = eval(data);
+        console.log(ans);
+        calciDisplay.setAttribute("value", ans);
+    } 
 }
 
-// function clearDisplay() {
-//     // document.calci.display.value = "";
-//     let calciDisplay = document.getElementsByClassName("calci-display");
-//     calciDisplay.setAttribute("value", "");
-// }
+function clearDisplay() {
+    let calciDisplay = document.getElementById("display");
+    calciDisplay.setAttribute("value", "");
+}
 
 // function deleteInput() {
 //     // let prevData = document.calci.display.value;
