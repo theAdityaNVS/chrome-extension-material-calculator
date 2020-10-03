@@ -2,7 +2,7 @@ let equalsBtn = document.querySelector(".equal-btn");
 let cancelBtn = document.querySelector(".c-btn");
 let deleteBtn = document.querySelector(".del-btn");
 let displayValue = "";
-// let audio = new Audio('click.wav');
+let audio = new Audio('click.wav');
 
 document.querySelectorAll('.inp-btn').forEach(item => {
     item.addEventListener('click', event => {
@@ -54,8 +54,8 @@ cancelBtn.addEventListener("click", function() {clearDisplay()});
 deleteBtn.addEventListener("click", function() {deleteInput()});
 
 function selectInput(choice) {
-  // audio.pause()
-  // audio.play()
+  audio.pause()
+  audio.play()
     let calciDisplay = document.getElementById("display");
     displayValue = calciDisplay.value + choice;
     calciDisplay.setAttribute("value", displayValue);
